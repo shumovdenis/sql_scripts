@@ -2,12 +2,10 @@ create schema netology;
 
 USE netology;
 
-create table Persons
-(
-    name varchar (255) NOT NULL,
-    surname varchar (255) NOT NULL,
-    age int check ( 0 < age < 120 ),
-    phone_number int,
-    city_of_living varchar(255),
-    PRIMARY KEY (name, age, surname)
+create table Customers (
+    id int primary key auto_increment,
+    name varchar(10) NOT NULL,
+    surname varchar(20) NOT NULL,
+    age int check (age > 0 ),
+    phone_number int default null
 );

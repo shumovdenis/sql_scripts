@@ -1,3 +1,4 @@
-select * FROM Persons
-WHERE age > 27
-ORDER BY age DESC ;
+select product_name
+from Orders
+join netology.Customers C on C.id = Orders.customer_id
+where name = 'ALEXY';
